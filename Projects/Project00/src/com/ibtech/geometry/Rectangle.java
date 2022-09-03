@@ -8,4 +8,8 @@ public class Rectangle {
         return width * height;
     }
 
+    int getPerimeter() {
+        return 2 * (width + height);
+    }
+
 }

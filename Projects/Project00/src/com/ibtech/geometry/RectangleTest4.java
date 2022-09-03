@@ -7,5 +7,6 @@ public class RectangleTest4 {
         rectangle.height = 4;
 
         System.out.println("Alan: " + rectangle.getArea());
+        System.out.println("Çevrel: " + rectangle.getPerimeter());
     }
 }
