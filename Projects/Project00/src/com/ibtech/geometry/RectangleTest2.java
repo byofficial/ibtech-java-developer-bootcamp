@@ -1,4 +1,4 @@
-package com.godoro.geometry;
+package com.ibtech.geometry;
 
 public class RectangleTest2 {
     static int getArea(int width, int height) {

@@ -1,4 +1,4 @@
-package com.godoro.test;
+package com.ibtech.test;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.godoro.geometry;
+package com.ibtech.geometry;
 
 public class RectangleTest4 {
     public static void main(String[] args) {
