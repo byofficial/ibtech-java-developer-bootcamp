@@ -30,7 +30,11 @@ public class Rectangle {
     }
 
     public void setHeight(int height) {
-        this.height = height;
+        if (height < 0) {
+            throw new IllegalArgumentException("Yükseklik eksi olamaz: " + height);
+        } else {
+            this.height = height;
+        }
     }
 
     int getArea() {
