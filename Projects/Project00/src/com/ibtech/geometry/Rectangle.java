@@ -4,9 +4,13 @@ public class Rectangle {
     int width;
     int height;
 
-    public Rectangle(int w, int h) {
-        width = w;
-        height = h;
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public Rectangle() {
+        this(1, 1);
     }
 
     int getArea() {
