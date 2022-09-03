@@ -18,7 +18,11 @@ public class Rectangle {
     }
 
     public void setWidth(int width) {
-        this.width = width;
+        if (width < 0) {
+            this.width = -width;
+        } else {
+            this.width = width;
+        }
     }
 
     public int getHeight() {
