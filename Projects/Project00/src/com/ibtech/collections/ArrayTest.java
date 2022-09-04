@@ -14,8 +14,14 @@ public class ArrayTest {
             System.out.println("* " + array[i]);
         }
 
+        int sum = 0;
+        int multiple = 1;
         for (int element : array) {
             System.out.println("$ " + element);
+            sum += element;
+            multiple *= element;
         }
+        System.out.println("Toplam: " + sum);
+        System.out.println("Çarpım: " + multiple);
     }
 }
