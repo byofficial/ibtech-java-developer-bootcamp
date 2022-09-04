@@ -17,10 +17,15 @@ public class ProductTest {
         }
 
         double priceSum = 0;
+        int counter = 0;
         for (Product product : products) {
-            priceSum += product.getSalesPrice();
+            if (product.getSalesPrice() > 5000) {
+                priceSum += product.getSalesPrice();
+                counter++;
+            }
+
         }
-        double priceAverage = priceSum / products.length;
+        double priceAverage = priceSum / counter;
         System.out.println("Ortalama Satış Fiyatı: " + priceAverage);
     }
 }
