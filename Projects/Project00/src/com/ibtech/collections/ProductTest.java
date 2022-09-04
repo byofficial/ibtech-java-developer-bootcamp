@@ -15,5 +15,12 @@ public class ProductTest {
                     + product.getProductName() + " "
                     + product.getSalesPrice());
         }
+
+        double priceSum = 0;
+        for (Product product : products) {
+            priceSum += product.getSalesPrice();
+        }
+        double priceAverage = priceSum / products.length;
+        System.out.println("Ortalama Satış Fiyatı: " + priceAverage);
     }
 }
