@@ -2,10 +2,8 @@ package com.ibtech.inheritance;
 
 public class Test {
     public static void main(String[] args) {
-        Customer customer = new Customer();
-        customer.setCustomerId(401);
-        customer.setFirstName("Neşet");
-        customer.setLastName("Ertaş");
-        customer.setTotalDebit(3450);
+        Customer customer = new Customer(401, "Neşet", "Ertaş", 3450);
+        Person person = new Customer(402, "Mahsuni", "Şerif", 6550);
+
     }
 }

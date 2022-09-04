@@ -4,6 +4,12 @@ public class Customer extends Person {
     private long customerId;
     private double totalDebit;
 
+    public Customer(long customerId, String firstName, String lastName, double totalDebit) {
+        super(firstName, lastName);
+        this.customerId = customerId;
+        this.totalDebit = totalDebit;
+    }
+
     public long getCustomerId() {
         return customerId;
     }
