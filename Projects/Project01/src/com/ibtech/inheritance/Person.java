@@ -1,8 +1,8 @@
 package com.ibtech.inheritance;
 
 public abstract class Person {
-    private String firstName;
-    private String lastName;
+    protected String firstName;
+    protected String lastName;
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
@@ -23,5 +23,9 @@ public abstract class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getFullName() {
+        return firstName + " " + lastName;
     }
 }

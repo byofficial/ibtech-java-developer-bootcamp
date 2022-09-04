@@ -25,4 +25,9 @@ public class Customer extends Person {
     public void setTotalDebit(double totalDebit) {
         this.totalDebit = totalDebit;
     }
+
+    @Override
+    public String getFullName() {
+        return lastName + " , " + firstName;
+    }
 }
