@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Homeworks/HW-00-01/HW-00-01.iml" filepath="$PROJECT_DIR$/Homeworks/HW-00-01/HW-00-01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Projects/Project00/Project00.iml" filepath="$PROJECT_DIR$/Projects/Project00/Project00.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ibtech-java-developer-bootcamp.iml" filepath="$PROJECT_DIR$/.idea/ibtech-java-developer-bootcamp.iml" />
     </modules>
