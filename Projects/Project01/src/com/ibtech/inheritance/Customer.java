@@ -30,4 +30,9 @@ public class Customer extends Person {
     public String getFullName() {
         return lastName + " , " + firstName;
     }
+
+    @Override
+    public String getGreeting() {
+        return "Merhaba";
+    }
 }

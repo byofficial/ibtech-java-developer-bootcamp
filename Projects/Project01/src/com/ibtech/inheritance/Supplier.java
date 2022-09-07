@@ -26,4 +26,9 @@ public class Supplier extends Person {
     public void setTotalCredit(double totalCredit) {
         this.totalCredit = totalCredit;
     }
+
+    @Override
+    public String getGreeting() {
+        return "Selam";
+    }
 }

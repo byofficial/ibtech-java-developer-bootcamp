@@ -6,8 +6,8 @@ public class Test {
         Person person = new Customer(402, "Mahsuni", "Şerif", 6550);
         Supplier supplier = new Supplier(701, "Orhan", "Gencebay", 8125);
 
-        System.out.println(customer.getFullName());
-        System.out.println(person.getFullName());
-        System.out.println(supplier.getFullName());
+        System.out.println(customer.getGreeting() + " " + customer.getFullName());
+        System.out.println(person.getGreeting() + " " + person.getFullName());
+        System.out.println(supplier.getGreeting() + " " + supplier.getFullName());
     }
 }

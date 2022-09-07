@@ -28,4 +28,6 @@ public abstract class Person {
     public String getFullName() {
         return firstName + " " + lastName;
     }
+
+    public abstract String getGreeting();
 }
