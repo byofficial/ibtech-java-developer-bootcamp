@@ -3,6 +3,7 @@ package com.ibtech.inheritance;
 public abstract class Person {
     protected String firstName;
     protected String lastName;
+    protected String emailAddress;
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
@@ -27,6 +28,14 @@ public abstract class Person {
 
     public String getFullName() {
         return firstName + " " + lastName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public abstract String getGreeting();
