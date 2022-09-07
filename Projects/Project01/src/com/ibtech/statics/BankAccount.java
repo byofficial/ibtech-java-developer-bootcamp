@@ -1,11 +1,16 @@
 package com.ibtech.statics;
 
 public class BankAccount {
+    public final static int MONTHS_IN_A_YEAR = 12;
     private double investment;
     private static double rate;
 
     public double getAmount(int month) {
-        return investment * (1 + month * rate / (12 * 100));
+        return investment * (1 + month * rate / (MONTHS_IN_A_YEAR * 100));
+    }
+
+    public double getAmount() {
+        return getAmount(MONTHS_IN_A_YEAR);
     }
 
     public double getInvestment() {
