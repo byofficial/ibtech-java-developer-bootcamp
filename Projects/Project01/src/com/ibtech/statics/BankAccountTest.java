@@ -6,6 +6,7 @@ public class BankAccountTest {
         BankAccount.setRate(24);
         BankAccount account1 = new BankAccount();
         account1.setInvestment(3000);
+        BankAccount.setRate(36);
         System.out.println("Tutar I: " + account1.getAmount(9));
 
         BankAccount account2 = new BankAccount();
