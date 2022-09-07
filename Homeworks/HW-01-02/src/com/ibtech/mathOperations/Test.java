@@ -8,6 +8,18 @@ public class Test {
 
         drawer.draw(f1, 10, 15, 100);
 
-        System.out.println();
+        System.out.println("-----------------------------\n");
+
+        System.out.println("QuadraticPolynomial");
+        MathFunction quadraticPolynomial = new QuadraticPolynomial(2, -3, 5);
+        drawer.draw(quadraticPolynomial, -5, 5, 100);
+
+        System.out.println("-----------------------------\n");
+
+        System.out.println("SinusoidalPolynomial");
+        MathFunction sinusoidalPolynomial = new SinusoidalPolynomial(1, 3, 5);
+        drawer.draw(sinusoidalPolynomial, -Math.PI, Math.PI, 100);
+
+        System.out.println("-----------------------------");
     }
 }
