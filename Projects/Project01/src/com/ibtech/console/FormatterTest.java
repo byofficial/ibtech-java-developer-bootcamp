@@ -5,6 +5,6 @@ public class FormatterTest {
         long l = 3;
         String s = "Godoro";
         double d = 3.1415;
-        System.out.printf("Uzun: %d %s %f\n", l, s, d);
+        System.out.printf("Uzun: %10d Sicim: %-20s İkişer: %11.2f\n", l, s, d);
     }
 }
