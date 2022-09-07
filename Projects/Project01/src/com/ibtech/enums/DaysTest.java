@@ -1,8 +1,7 @@
 package com.ibtech.enums;
 
 public class DaysTest {
-    public static void main(String[] args) {
-        int day = 2;
+    private static void printDay(int day) {
         switch (day) {
             case 1:
                 System.out.println("Paartesi");
@@ -15,4 +14,10 @@ public class DaysTest {
                 break;
         }
     }
+
+    public static void main(String[] args) {
+        int day = 2;
+        printDay(day);
+    }
 }
+
