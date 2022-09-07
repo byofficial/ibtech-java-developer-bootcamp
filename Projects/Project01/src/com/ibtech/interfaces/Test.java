@@ -33,5 +33,20 @@ public class Test {
         Flyable flyable2 = new Bat("Vampir");
         flyable2.fly();
         flyable2.land();
+
+        makeFly(pigeon);
+        makeFly(bird);
+        makeFly(flyable);
+        makeFly(bat);
+        //makeFly(mammal);
+        makeFly(flyable2);
+    }
+
+    private static void makeFly(Flyable flyable) {
+        System.out.println();
+        System.out.println("UÇ");
+        flyable.fly();
+        System.out.println("KON");
+        flyable.land();
     }
 }
