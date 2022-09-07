@@ -16,12 +16,14 @@ public class Test {
         System.out.println(supplier.getGreeting() + " " + supplier.getFullName());
 
         sendEmail(customer);
+        sendEmail(person);
+        sendEmail(supplier);
     }
 
-    private static void sendEmail(Customer customer) {
+    private static void sendEmail(Person person) {
         System.out.println();
-        System.out.println("Kime: " + customer.getEmailAddress());
-        System.out.println("Konu: " + customer.getGreeting());
-        System.out.println("Gövde: " + customer.getFullName());
+        System.out.println("Kime: " + person.getEmailAddress());
+        System.out.println("Konu: " + person.getGreeting());
+        System.out.println("Gövde: " + person.getFullName());
     }
 }
