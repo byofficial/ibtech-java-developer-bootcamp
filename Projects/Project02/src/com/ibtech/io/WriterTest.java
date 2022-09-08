@@ -9,11 +9,11 @@ public class WriterTest {
         String path = "C:\\Users\\burak\\IdeaProjects\\ExPath\\out.txt";
         FileWriter fw = new FileWriter(path);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write("Java");
-        bw.write("JDBC");
-        bw.write("JAXP");
-        bw.write("JSON-P");
-        bw.write("JSON");
+        bw.write("Java\r\n");
+        bw.write("JDBC\r\n");
+        bw.write("JAXP\r\n");
+        bw.write("JSON-P\r\n");
+        bw.write("JSON\r\n");
         bw.close();
     }
 }
