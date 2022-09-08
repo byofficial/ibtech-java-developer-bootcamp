@@ -9,11 +9,11 @@ public class ReaderTest {
         String path = "C:\\Users\\burak\\IdeaProjects\\ExPath\\in.txt";
         BufferedReader br = new BufferedReader(new FileReader(path));
         String line = null;
-        String text = "";
+        StringBuilder builder = new StringBuilder();
         while ((line = br.readLine()) != null) {
-            text += line + "\r\n";
+            builder.append(line).append("\r\n");
         }
-        System.out.println("Yazı:\n" + text);
+        System.out.println("Yazı:\n" + builder.toString());
         br.close();
     }
 }
