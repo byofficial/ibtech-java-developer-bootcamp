@@ -17,9 +17,9 @@ public class TestFilter {
 
         Connection connection = DriverManager.getConnection(url, user, password);
 
-        String sql = "select * from product where salesPrice > ?";
+        String sql = "select * from Product where productName like ?";
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setLong(1, 1000);
+        statement.setString(1, "%ep Te%");
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
             long productId = resultSet.getLong("productId");
