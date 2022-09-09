@@ -2,8 +2,7 @@ package com.ibtech.thread;
 
 public class MyLambaTest {
     public static void main(String[] args) {
-        Thread thread = new Thread(() -> walk());
-        thread.start();
+        new Thread(() -> walk()).start();
         process();
     }
 
