@@ -1,11 +1,11 @@
-package relation;
+package com.ibtech.relation;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Relation {
+public class AggregatedList {
     public static void main(String[] args) throws Exception {
         String url = "jdbc:postgresql://localhost/dbibtech";
         String user = "postgres";
@@ -16,23 +16,19 @@ public class Relation {
 
         Connection connection = DriverManager.getConnection(url, user, password);
 
-        String sql = "select * from Employee e \r\n"
-                + " left join Department d on e.departmentid = d.departmentid";
+        String sql = "select e.departmentid, departmentname, sum(monthlySalary) as salarySum \r\n"
+                + "from employee e\r\n"
+                + " right join department d  on e.departmentid  = d.departmentid \r\n"
+                + "group  by e.departmentid , d.departmentname";
 
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet resultSet = statement.executeQuery();
 
         while (resultSet.next()) {
-            long employeeId = resultSet.getLong("employeeId");
-            String employeeName = resultSet.getString("employeeName");
-            double monthlySalary = resultSet.getDouble("monthlySalary");
             long departmentId = resultSet.getLong("departmentId");
             String departmentName = resultSet.getString("departmentName");
-            System.out.println(employeeId + " "
-                    + employeeName + " "
-                    + monthlySalary + " "
-                    + departmentId + " "
-                    + departmentName);
+            double salarySum = resultSet.getDouble("salarySum");
+            System.out.format("%d %s %.2f\n", (long) departmentId, departmentName, salarySum);
         }
         connection.close();
     }
