@@ -15,6 +15,7 @@ public class TransactionTest {
         Class.forName(driver);
 
         Connection connection = DriverManager.getConnection(url, user, password);
+        connection.setAutoCommit(false);
 
         String sql = "insert into Product(productName,salesPrice) values(?,?)";
 
@@ -29,11 +30,12 @@ public class TransactionTest {
         int affected2 = statement2.executeUpdate();
 
 
-        PreparedStatement statement3 = connection.prepareStatement(sql);
+        PreparedStatement statement3 = connection.prepareStatement("X" + sql + "X");
         statement3.setString(1, "Ürün 103");
         statement3.setDouble(2, 3030);
         int affected3 = statement3.executeUpdate();
 
+        connection.commit();
         connection.close();
 
         System.out.println("Etkilenmiş " + affected1 + " " + affected2 + " " + affected3);
