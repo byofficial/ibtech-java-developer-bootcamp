@@ -11,6 +11,10 @@ public class Supplier {
         this.totalCredit = totalCredit;
     }
 
+    public Supplier() {
+
+    }
+
     public long getSupplierId() {
         return supplierId;
     }

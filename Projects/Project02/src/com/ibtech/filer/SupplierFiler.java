@@ -1,7 +1,11 @@
 package com.ibtech.filer;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SupplierFiler {
@@ -11,7 +15,7 @@ public class SupplierFiler {
         this.filePath = filePath;
     }
 
-    public void store(Iterable<Supplier> supplierList) throws Exception {
+    public void store(Iterable<Supplier> supplierList) throws IOException {
         BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
         for (Supplier supplier : supplierList) {
             String line = format(supplier);
@@ -28,8 +32,22 @@ public class SupplierFiler {
         return builder.toString();
     }
 
-    public List<Supplier> load() {
-        return null;
+    public List<Supplier> load() throws IOException {
+        List<Supplier> supplierList = new ArrayList<Supplier>();
+        BufferedReader br = new BufferedReader(new FileReader(filePath));
+        String line = null;
+
+        while ((line = br.readLine()) != null) {
+            String[] tokens = line.split(";");
+            Supplier supplier = new Supplier();
+            supplier.setSupplierId(Long.parseLong(tokens[0]));
+            supplier.setSupplierName(tokens[1]);
+            supplier.setTotalCredit(Double.parseDouble(tokens[2]));
+            supplierList.add(supplier);
+        }
+
+        br.close();
+        return supplierList;
     }
 
     public String getFilePath() {
