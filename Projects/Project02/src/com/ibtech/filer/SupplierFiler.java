@@ -10,6 +10,7 @@ import java.util.List;
 
 public class SupplierFiler {
     private String filePath;
+    public final static String DELIMITER = ";";
 
     public SupplierFiler(String filePath) {
         this.filePath = filePath;
@@ -20,14 +21,15 @@ public class SupplierFiler {
         for (Supplier supplier : supplierList) {
             String line = format(supplier);
             bw.write(line);
+            bw.write("\r\n");
         }
         bw.close();
     }
 
     private String format(Supplier supplier) {
         StringBuilder builder = new StringBuilder();
-        builder.append(supplier.getSupplierId()).append(";");
-        builder.append(supplier.getSupplierName()).append(";");
+        builder.append(supplier.getSupplierId()).append(DELIMITER);
+        builder.append(supplier.getSupplierName()).append(DELIMITER);
         builder.append(supplier.getTotalCredit());
         return builder.toString();
     }
@@ -38,16 +40,21 @@ public class SupplierFiler {
         String line = null;
 
         while ((line = br.readLine()) != null) {
-            String[] tokens = line.split(";");
-            Supplier supplier = new Supplier();
-            supplier.setSupplierId(Long.parseLong(tokens[0]));
-            supplier.setSupplierName(tokens[1]);
-            supplier.setTotalCredit(Double.parseDouble(tokens[2]));
+            Supplier supplier = parse(line);
             supplierList.add(supplier);
         }
 
         br.close();
         return supplierList;
+    }
+
+    private Supplier parse(String line) {
+        String[] tokens = line.split(DELIMITER);
+        Supplier supplier = new Supplier();
+        supplier.setSupplierId(Long.parseLong(tokens[0]));
+        supplier.setSupplierName(tokens[1]);
+        supplier.setTotalCredit(Double.parseDouble(tokens[2]));
+        return supplier;
     }
 
     public String getFilePath() {
