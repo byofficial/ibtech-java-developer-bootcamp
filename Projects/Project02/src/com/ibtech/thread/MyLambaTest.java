@@ -2,10 +2,9 @@ package com.ibtech.thread;
 
 public class MyLambaTest {
     public static void main(String[] args) {
-        Runnable runnable = () -> {
+        Thread thread = new Thread(() -> {
             walk();
-        };
-        Thread thread = new Thread(runnable);
+        });
         thread.start();
         process();
     }
