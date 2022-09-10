@@ -2,9 +2,12 @@ package com.ibtech.composition.manager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public abstract class BaseManager {
+public abstract class BaseManager<E> {
     private final String url = "jdbc:postgresql://localhost/dbibtech";
     private final String user = "postgres";
     private final String password = "root";
@@ -28,6 +31,16 @@ public abstract class BaseManager {
         if (connection != null) {
             connection.close();
         }
-
     }
+
+    protected List<E> parseList(ResultSet resultSet) throws Exception {
+        List<E> entityList = new ArrayList<>();
+        while (resultSet.next()) {
+            E entity = parse(resultSet);
+            entityList.add(entity);
+        }
+        return entityList;
+    }
+
+    protected abstract E parse(ResultSet resultSet) throws Exception;
 }
