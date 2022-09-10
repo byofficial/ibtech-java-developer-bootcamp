@@ -16,6 +16,10 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.StringWriter;
+import java.io.Writer;
 
 public class XmlUtilities {
     private static DocumentBuilderFactory factory;
@@ -31,6 +35,13 @@ public class XmlUtilities {
             throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilder builder = getFactory().newDocumentBuilder();
         Document document = builder.parse(path);
+        return document;
+    }
+
+    public static Document parseString(InputStream in)
+            throws ParserConfigurationException, IOException, SAXException {
+        DocumentBuilder builder = getFactory().newDocumentBuilder();
+        Document document = builder.parse(in);
         return document;
     }
 
@@ -68,13 +79,34 @@ public class XmlUtilities {
     }
 
     public static void dump(Document document, String path) throws IOException, TransformerException {
+        FileWriter writer = new FileWriter(new File(path));
+        dump(document, writer);
+    }
+
+    public static String dump(Document document) throws IOException, TransformerException {
+        StringWriter writer = new StringWriter();
+        dump(document, writer);
+        return writer.toString();
+    }
+
+    public static void dump(Document document, Writer writer) throws IOException, TransformerException {
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
         DOMSource data = new DOMSource(document);
-        FileWriter writer = new FileWriter(new File(path));
+
         StreamResult result = new StreamResult(writer);
         transformer.transform(data, result);
         writer.close();
+    }
+
+    public static void dump(Document document, OutputStream out) throws IOException, TransformerException {
+        TransformerFactory factory = TransformerFactory.newInstance();
+        Transformer transformer = factory.newTransformer();
+        DOMSource data = new DOMSource(document);
+
+        StreamResult result = new StreamResult(out);
+        transformer.transform(data, result);
+        out.close();
     }
 
     public static void addSingleElementText(Document document,
