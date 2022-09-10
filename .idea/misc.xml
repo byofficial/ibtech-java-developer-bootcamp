@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/Homeworks/HW-05-01" />
     <file type="web" url="file://$PROJECT_DIR$/Homeworks/HW-05-02" />
+    <file type="web" url="file://$PROJECT_DIR$/Homeworks/HW-05-02-2" />
     <file type="web" url="file://$PROJECT_DIR$/Projects/Project04" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/Projects/Project04/pom.xml" />
         <option value="$PROJECT_DIR$/Homeworks/HW-05-01/pom.xml" />
         <option value="$PROJECT_DIR$/Homeworks/HW-05-02/pom.xml" />
+        <option value="$PROJECT_DIR$/Homeworks/HW-05-02-2/pom.xml" />
       </list>
     </option>
   </component>
