@@ -8,6 +8,13 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class XmlUtilities {
@@ -50,6 +57,37 @@ public class XmlUtilities {
     public static long getAttribute(Element element, String name, long defaultValue) {
         String string = getAttribute(element, name, Long.toString(defaultValue));
         return Long.parseLong(string);
+    }
+
+    public static Document create(String root) throws ParserConfigurationException {
+        DocumentBuilder builder = getFactory().newDocumentBuilder();
+        Document document = builder.newDocument();
+        Element employee = document.createElement(root);
+        document.appendChild(employee);
+        return document;
+    }
+
+    public static void dump(Document document, String path) throws IOException, TransformerException {
+        TransformerFactory factory = TransformerFactory.newInstance();
+        Transformer transformer = factory.newTransformer();
+        DOMSource data = new DOMSource(document);
+        FileWriter writer = new FileWriter(new File(path));
+        StreamResult result = new StreamResult(writer);
+        transformer.transform(data, result);
+        writer.close();
+    }
+
+    public static void addSingleElementText(Document document,
+                                            Element parent, String tag, String content) {
+        Element name = document.createElement(tag);
+        name.setTextContent(content);
+        parent.appendChild(name);
+    }
+
+    public static void addSingleElementText(Document document,
+                                            Element parent, String tag, double content) {
+        String string = Double.toString(content);
+        addSingleElementText(document, parent, tag, string);
     }
 
 }
