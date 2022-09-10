@@ -1,9 +1,10 @@
-package com.ibtech.composition;
+package com.ibtech.composition.entity;
 
 public class Employee {
     private long employeeId;
     private String employeeName;
     private double monthlySalary;
+    private Department department;
 
     public Employee(long employeeId, String employeeName, double monthlySalary) {
         this.employeeId = employeeId;
@@ -36,5 +37,13 @@ public class Employee {
 
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

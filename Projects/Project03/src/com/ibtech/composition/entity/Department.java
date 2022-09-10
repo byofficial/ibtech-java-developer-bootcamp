@@ -1,4 +1,4 @@
-package com.ibtech.composition;
+package com.ibtech.composition.entity;
 
 public class Department {
     private long departmentId;
