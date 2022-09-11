@@ -11,6 +11,7 @@
         <module name="HW-05-01" />
         <module name="HW-06-02" />
         <module name="Project05" />
+        <module name="Project06" />
         <module name="HW-05-02" />
         <module name="HW-06-03" />
         <module name="HW-05-03" />
@@ -18,5 +19,8 @@
         <module name="HW-05-02-2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
