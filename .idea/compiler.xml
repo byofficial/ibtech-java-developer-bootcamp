@@ -18,17 +18,5 @@
         <module name="HW-05-02-2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Test213" target="11" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="HW-00-01" options="--add-modules java.base" />
-      <module name="HW-00-02" options="--add-modules java.base" />
-      <module name="HW-00-03" options="--add-modules java.base" />
-      <module name="HW-00-04" options="--add-modules java.base" />
-      <module name="Project00" options="--add-modules java.base" />
-    </option>
   </component>
 </project>
