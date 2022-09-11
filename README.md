@@ -6,7 +6,7 @@
 <h1 align="center"> IBTech Java Developer Bootcamp </h1>
 <h3 align="center"> Bootcamp Homeworks & Projects Repo </h3>  
 
-</br>
+<br/>
 
 <p align="center"> 
   <img src="docs/images/banner.jpg" alt="Sample signal" width="60%" height="30%">
@@ -58,6 +58,7 @@
         <li><a href="#project03">Project03</a></li>
         <li><a href="#project04">Project04</a></li>
         <li><a href="#project05">Project05</a></li>
+        <li><a href="#project06">Project06</a></li>
       </ul>
     </li>
     <li><a href="#gelistirme"> ➤ Bootcamp Hakkında</a></li>
@@ -163,6 +164,7 @@ Projede kullanılan diğer teknolojiler:
 <b><span id="project03"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project03"><span style="color: white;">✤ Project03</span></a></span></b><br/>
 <b><span id="project04"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project04"><span style="color: white;">✤ Project04</span></a></span></b><br/>
 <b><span id="project05"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project05"><span style="color: white;">✤ Project05</span></a></span></b><br/>
+<b><span id="project06"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project06"><span style="color: white;">✤ Project06</span></a></span></b><br/>
 </p>
 
 
