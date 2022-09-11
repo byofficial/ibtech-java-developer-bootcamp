@@ -1,4 +1,4 @@
-package com.ibtech.orm.relation;
+package com.ibtech.orm.relation.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.ibtech.orm.relation;
+package com.ibtech.orm.relation.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
