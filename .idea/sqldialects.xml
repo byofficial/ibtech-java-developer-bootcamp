@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/Homeworks/HW-04-01/src/com/ibtech/pattern/CustomerManager.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Homeworks/HW-06-04/src/main/java/com/ibtech/sports/database/manager/PlayerManager.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/Projects/Project03/src/com/ibtech/pattern/ProductManager.java" dialect="GenericSQL" />
   </component>
 </project>
