@@ -59,8 +59,10 @@
         <li><a href="#project04">Project04</a></li>
         <li><a href="#project05">Project05</a></li>
         <li><a href="#project06">Project06</a></li>
+        <li><a href="#project07">Project07</a></li>
       </ul>
     </li>
+    <li><a href="#final"> ➤ Bootcamp Final Projesi</a></li>
     <li><a href="#gelistirme"> ➤ Bootcamp Hakkında</a></li>
     <li><a href="#iletisim"> ➤ İletişim ve Bilgiler</a></li>
   </ol>
@@ -72,6 +74,11 @@
 <h2 id="hakkinda"> :pencil: Repo Hakkında</h2>
 
 <p align="justify"> 
+<b>Bootcamp Final Projesi:</b><br/>
+<b>Repo:</b><br/>
+<a href="https://github.com/byofficial/ibtech-java-developer-final">https://github.com/byofficial/ibtech-java-developer-final</a><br/>
+<b>Canlı Ortam:</b><br/>
+<a href="https://ibtech-bootcamp.herokuapp.com/">https://ibtech-bootcamp.herokuapp.com/</a><br/><br/>
 <b>Kullanılan IDE ve Ortam:</b>
 IDE olarak Intelij IDEA tercih edilmiştir. Yapılan tüm ödevler 'Homeworks' klasörü altında
 toplanılarak Java Modülü olarak ayrılmıştır. Verilen ilk ödevler de klasik java modülü oluşturularak yapılmıştır.
@@ -105,7 +112,6 @@ Projede kullanılan diğer teknolojiler:
 * Maven
 * JSP
 * JAXP
-* JAVA IO
 * SERVLET
 * TOMCAT 9.5
 * PostgreSQL
@@ -165,8 +171,18 @@ Projede kullanılan diğer teknolojiler:
 <b><span id="project04"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project04"><span style="color: white;">✤ Project04</span></a></span></b><br/>
 <b><span id="project05"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project05"><span style="color: white;">✤ Project05</span></a></span></b><br/>
 <b><span id="project06"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project06"><span style="color: white;">✤ Project06</span></a></span></b><br/>
+<b><span id="project07"><a href="https://github.com/byofficial/ibtech-java-developer-bootcamp/tree/main/Projects/Project07"><span style="color: white;">✤ Project07</span></a></span></b><br/>
 </p>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/vintage.png)
+
+<h2 id="final"> :hammer: Bootcampte Final Projesi</h2>
+
+<p align="justify">
+Aşağıdaki linkten final projesinin olduğu repoya ulaşabilirsiniz.
+</p>
+<b>Github Repo:</b><br/>
+<a href="https://github.com/byofficial/ibtech-java-developer-final">https://github.com/byofficial/ibtech-java-developer-final</a><br/>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/vintage.png)
 
